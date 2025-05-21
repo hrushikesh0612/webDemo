@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Length & Number Reversal</title>
+</head>
+<body>
+
+<h2>String Length Checker</h2>
+<input type="text" id="inputString" placeholder="Enter a string">
+<button onclick="showStringLength()">Get Length</button>
+<p id="stringLengthResult"></p>
+
+<h2>Number Reverser</h2>
+<input type="number" id="inputNumber" placeholder="Enter a number">
+<button onclick="showReversedNumber()">Reverse Number</button>
+<p id="numberReverseResult"></p>
+
+<script>
+function getStringLength(str) {
+  return str.length;
+}
+
+function reverseNumber(num) {
+  return num.toString().split('').reverse().join('');
+}
+
+function showStringLength() {
+  let input = document.getElementById("inputString").value;
+  let result = getStringLength(input);
+  document.getElementById("stringLengthResult").textContent = "Length: " + result;
+}
+
+function showReversedNumber() {
+  let input = document.getElementById("inputNumber").value;
+  let result = reverseNumber(input);
+  document.getElementById("numberReverseResult").textContent = "Reversed: " + result;
+}
+</script>
+
+</body>
+</html>
